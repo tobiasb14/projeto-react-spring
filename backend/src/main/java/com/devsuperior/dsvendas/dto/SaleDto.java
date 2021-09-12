@@ -9,6 +9,7 @@ public class SaleDto {
 	private long id;
 	private int visited;
 	private int deals;
+	private double amount;
 	private LocalDate date;
 	private SellerDto seller;
 	
@@ -16,6 +17,7 @@ public class SaleDto {
 		id = sale.getId();
 		visited = sale.getVisited();
 		deals = sale.getDeals();
+		amount = sale.getAmount();
 		date = sale.getDate();
 		seller = new SellerDto(sale.getSeller());
 	}
@@ -30,6 +32,10 @@ public class SaleDto {
 
 	public int getDeals() {
 		return deals;
+	}
+	
+	public double getAmount() {
+		return amount;
 	}
 
 	public LocalDate getDate() {
